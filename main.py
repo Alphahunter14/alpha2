@@ -5,7 +5,6 @@ import io
 import os
 
 app = Flask(__name__)
-app = Flask(__name__, static_url_path='../Templates/index.html')
 
 
 temp_dir = os.path.join(app.root_path, 'temp')
