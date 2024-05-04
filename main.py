@@ -14,6 +14,11 @@ os.makedirs(temp_dir, exist_ok=True)
 def index():
     return render_template('index.html')
 
+# Define the health check route
+@app.route('/health')
+def health_check():
+    return 'Server is up and running'
+
 @app.route('/generate_qr', methods=['POST'])
 def generate_qr():
     # Extract data from the form
